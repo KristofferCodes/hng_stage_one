@@ -19,7 +19,9 @@ class _WebViewPageState extends State<WebViewPage> {
         centerTitle: true,
       ),
       body: WebViewWidget(
-          controller: WebViewController()..loadRequest(Uri.parse(widget.url))),
+          controller: WebViewController()
+            ..loadRequest(Uri.parse(widget.url))
+            ..clearCache()),
     );
   }
 }
